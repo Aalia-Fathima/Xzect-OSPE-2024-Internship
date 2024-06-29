@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- for font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body {
+        overflow-x: hidden;
+    }
+
+    #container {
+        position: relative;
+        width: 100%;
+    }
+
+    .background-image {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100vh;
+        background-color: red;
+        clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content {
+        color: white;
+        text-align: center;
+        padding: 20px;
+        max-width: 80%;
+
+    }
+
+    .form-overlay {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        width: 60%;
+        transform: translateX(-50%);
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    }
+
+    .form-overlay input,
+    .form-overlay select,
+    .form-overlay button {
+        padding: 10px;
+        margin: 5px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .form-overlay button {
+        background-color: red;
+        color: white;
+        cursor: pointer;
+    }
+
+    p {
+        line-height: 25px;
+        margin-bottom: 20px;
+        word-wrap: break-word;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="flex justify-between bg-gray-800 p-4 text-white flex-wrap w-full">
+            <div class="flex text-white flex-wrap">
+                <p class="mb-0 mr-5">2464 Royal Ln. Mesa, New Jersey 45463</p>
+                <p class="mb-0 mr-5">info@example.com</p>
+                <p class="mr-0">+91-213-666-0027</p>
+            </div>
+            <div class="flex items-center text-white">
+                <p class="mb-0 mr-4"><a class="text-white" href="#">Login</a></p>
+                <i class="fab fa-facebook-f fa-lg mr-3"></i>
+                <i class="fab fa-twitter fa-lg mr-3"></i>
+                <i class="fab fa-linkedin fa-lg mr-3"></i>
+            </div>
+        </div>
+        <nav class="bg-gray-100">
+            <div class="container mx-auto flex flex-wrap items-center justify-between">
+                <a class="flex items-center" href="#">
+                    <img src="roof.png" alt="Roof Icon" class="w-24 h-auto">
+                    <div>
+                        <h3 class="p-0 m-0">Roofer</h3>
+                        <p class="p-0 m-0">Roof Service</p>
+                    </div>
+                </a>
+                <button id="navbar-toggler" class="block md:hidden focus:outline-none"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                <div id="navbarSupportedContent"
+                    class="hidden md:flex md:flex-row md:items-center md:justify-end w-full md:w-auto">
+                    <ul class="flex flex-col md:flex-row md:space-x-4">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <button class="bg-red-500 text-white font-bold py-2 px-4 rounded">Free Estimate</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div id="container">
+                <img src="roofer.png" alt="Background Image" class="background-image">
+                <div class="overlay">
+                    <div class="content">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">BEST ROOFING SERVICE &
+                            CONSULTING</h1>
+                        <p class="text-base md:text-lg lg:text-xl mb-6 px-4">Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Turpis ridiculus tellus.</p>
+                        <button class="btn btn-primary bg-light text-dark py-2 px-6 md:py-3 md:px-8 rounded-full"
+                            style="background-color: aliceblue; color: black;">MAKE
+                            APPOINTMENT</button>
+                    </div>
+                </div>
+                <div style="height: 400px;"></div>
+                <div class="form-overlay" style="text-align: center;">
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">REQUEST FOR A SERVICE</h1>
+                    <form action="#" method="POST">
+                        <input type="text" name="name" placeholder="Name" required>
+                        <input type="text" name="email" placeholder="Your Email" required>
+                        <input type="text" name="phone" placeholder="Phone Number" required>
+                        <button type="submit">SUBMIT NOW</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <br><br>
+        <section class="flex justify-center items-center p-4 text-center flex-wrap">
+            <div style="width: 25em;" class="w-full md:w-1/3 lg:w-1/3 xl:w-1/3 p-4">
+                <div><i class="fas fa-user text-red-500 text-3xl"></i></div>
+                <br>
+                <h3 class="text-lg font-bold">Expert Engineer</h3>
+                <p class="text-sm">Suspndisse varius etiam est vitae dui tempus nec vitae orci sodales metus velit nec
+                    at diam in sed.</p>
+            </div>
+            <div style="width: 25em;" class="w-full md:w-1/3 lg:w-1/3 xl:w-1/3 p-4">
+                <div><i class="fas fa-pen-ruler text-red-500 text-3xl"></i></div>
+                <br>
+                <h3 class="text-lg font-bold">Quality Materials</h3>
+                <p class="text-sm">Suspndisse varius etiam est vitae dui tempus nec vitae orci sodales metus velit nec
+                    at diam in sed.</p>
+            </div>
+            <div style="width: 25em;" class="w-full md:w-1/3 lg:w-1/3 xl:w-1/3 p-4">
+                <div><i class="fas fa-file-signature text-red-500 text-3xl"></i></div>
+                <br>
+                <h3 class="text-lg font-bold">Free Estimates</h3>
+                <p class="text-sm">Suspndisse varius etiam est vitae dui tempus nec vitae orci sodales metus velit nec
+                    at diam in sed.</p>
+            </div>
+        </section>
+        <section class="flex items-center justify-center p-3 flex-wrap md:flex-nowrap gap-10">
+            <div style="width: 100em;display: flex;gap: 20px;">
+                <div>
+                    <img src="roof (1).png" alt="Worker Image" style="height: 500px;width:300px;">
+                </div>
+                <div style="display: flex;flex-direction: column;gap: 20px;">
+                    <img src="roof (2).png" alt="Worker Image" style="height: 200px;width:300px;">
+                    <img src="roof (3).png" alt="Worker Image" style="height: 280px;width:300px;">
+                </div>
+            </div>
+            <div class="text-center">
+                <h3 class="text-red-500 text-2xl">ABOUT ROOFTOX</h3>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Experienced & Quality More Than 30 Years
+                </h1>
+                <p class="mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing integer ultrices
+                    suspendisse varius etiam est. Est, felis, tempus nec vitae orci sodales Metus, velit nec at diam in
+                    sed. Massa dui ipsum ornare sagittis dolor sagittis amet odio est. Sit semper et velit fusce.</p>
+                <div class="flex justify-center gap-10">
+                    <div class="text-center">
+                        <div><i class="fas fa-pen-ruler text-red-500 text-3xl"></i></div>
+                        <br>
+                        <h4 class="text-lg font-bold">Quality Materials</h4>
+                        <p>Amet minim mollit deserunt ullamco sit enim.</p>
+                    </div>
+                    <div class="text-center">
+                        <div><i class="fas fa-user text-red-500 text-3xl"></i></div>
+                        <br>
+                        <h4 class="text-lg font-bold">Expert Engineer</h4>
+                        <p>Amet minim mollit deserunt ullamco sit enim.</p>
+                    </div>
+                </div>
+                <button style="background-color: red; color: white;"
+                    class="btn btn-primary py-3 px-8 rounded-full mt-4 font-bold">READ MORE</button>
+            </div>
+        </section>
+        <br>
+        <section class="text-center">
+            <div id="container" class="bg-gray-900">
+                <br><br>
+                <p class="font-bold text-red-500">OUR SERVICES</p>
+                <h1 class="text-3xl md:text-5xl lg:text-6xl text-white">We’re Providing Quality<br> Roofing Services
+                </h1>
+
+                <div class="flex justify-center mt-10">
+                    <div>
+                        <ul class="flex mb-3" id="pills-tab" role="tablist">
+                            <li class="mr-3">
+                                <button
+                                    class="py-2 px-4 bg-gray-800 border border-gray-600 text-white rounded-md focus:outline-none active:bg-red-500 active:text-gray-900"
+                                    id="pills-home-tab" data-tab-target="pills-home">Roof Cornering</button>
+                            </li>
+                            <li class="mr-3">
+                                <button
+                                    class="py-2 px-4 bg-gray-800 border border-gray-600 text-white rounded-md focus:outline-none"
+                                    id="pills-profile-tab" data-tab-target="pills-profile">Roofing Layer</button>
+                            </li>
+                            <li class="mr-3">
+                                <button
+                                    class="py-2 px-4 bg-gray-800 border border-gray-600 text-white rounded-md focus:outline-none"
+                                    id="pills-contact-tab" data-tab-target="pills-contact">Damage Repair</button>
+                            </li>
+                            <li>
+                                <button
+                                    class="py-2 px-4 bg-gray-800 border border-gray-600 text-white rounded-md focus:outline-none"
+                                    id="pills-disabled-tab" data-tab-target="pills-disabled">Siding Install</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tab-content mt-8">
+                    <div class="tab-pane hidden" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+                        tabindex="0">
+                        <div
+                            class="flex flex-col md:flex-row items-center justify-between text-white px-4 md:px-20 gap-8">
+                            <div class="w-full md:w-1/2">
+                                <img src="slide (3).png" alt="image" class="w-full md:w-auto">
+                            </div>
+                            <div class="w-full md:w-1/2 text-left">
+                                <h2 class="text-2xl md:text-3xl font-bold">Roof Cornering</h2>
+                                <p class="mt-4 text-gray-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Adipiscing integer ultrices suspendisse varius etiam est. Est, felis, tempus nec
+                                    vitae orci sodales Metus, velit nec at diam in sed. Massa dui ipsum ornare sagittis
+                                    dolor sagittis amet odio est. Sit semper et velit fusce.</p>
+                                <ul class="mt-4 text-gray-300">
+                                    <li><i class="far fa-check-circle text-red-500"></i> Innovative Work Experience</li>
+                                    <li><i class="far fa-check-circle text-red-500"></i> 100% Satisfaction Guarantee
+                                    </li>
+                                    <li><i class="far fa-check-circle text-red-500"></i> Quality Expert Engineer</li>
+                                </ul>
+                                <button style="background-color: red; color: white;" class="btn btn-primary mt-4 font-bold py-3 px-8">READ
+                                    MORE</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane hidden" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+                        tabindex="0">
+                        <div
+                            class="flex flex-col md:flex-row items-center justify-between text-white px-4 md:px-20 gap-8">
+                            <div class="w-full md:w-1/2">
+                                <img src="slide (2).png" alt="image" class="w-full md:w-auto">
+                            </div>
+                            <div class="w-full md:w-1/2 text-left">
+                                <h2 class="text-2xl md:text-3xl font-bold">Roofing Layer</h2>
+                                <p class="mt-4 text-gray-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Adipiscing integer ultrices suspendisse varius etiam est. Est, felis, tempus nec
+                                    vitae orci sodales Metus, velit nec at diam in sed. Massa dui ipsum ornare sagittis
+                                    dolor sagittis amet odio est. Sit semper et velit fusce.</p>
+                                <ul class="mt-4 text-gray-300">
+                                    <li><i class="far fa-check-circle text-red-500"></i> Innovative Work Experience</li>
+                                    <li><i class="far fa-check-circle text-red-500"></i> 100% Satisfaction Guarantee
+                                    </li>
+                                    <li><i class="far fa-check-circle text-red-500"></i> Quality Expert Engineer</li>
+                                </ul>
+                                <button style="background-color: red; color: white;" class="btn btn-primary mt-4 font-bold py-3 px-8">READ
+                                    MORE</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane active" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"
+                        tabindex="0">
+                        <div
+                            class="flex flex-col md:flex-row items-center justify-between text-white px-4 md:px-20 gap-8">
+                            <div class="w-full md:w-1/2">
+                                <img src="slide (1).png" alt="image" class="w-full md:w-auto">
+                            </div>
+                            <div class="w-full md:w-1/2 text-left">
+                                <h2 class="text-2xl md:text-3xl font-bold">Damage Repair</h2>
+                                <p class="mt-4 text-gray-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Adipiscing integer ultrices suspendisse varius etiam est. Est, felis, tempus nec
+                                    vitae orci sodales Metus, velit nec at diam in sed. Massa dui ipsum ornare sagittis
+                                    dolor sagittis amet odio est. Sit semper et velit fusce.</p>
+                                <ul class="mt-4 text-gray-300">
+                                    <li><i class="far fa-check-circle text-red-500"></i> Innovative Work Experience</li>
+                                    <li><i class="far fa-check-circle text-red-500"></i> 100% Satisfaction Guarantee
+                                    </li>
+                                    <li><i class="far fa-check-circle text-red-500"></i> Quality Expert Engineer</li>
+                                </ul>
+                                <button style="background-color: red; color: white;" class="btn btn-primary mt-4 font-bold py-3 px-8">READ
+                                    MORE</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane hidden" id="pills-disabled" role="tabpanel"
+                        aria-labelledby="pills-disabled-tab" tabindex="0">
+                        <div
+                            class="flex flex-col md:flex-row items-center justify-between text-white px-4 md:px-20 gap-8">
+                            <div class="w-full md:w-1/2">
+                                <img src="WORK.png" alt="image" class="w-full md:w-auto">
+                            </div>
+                            <div class="w-full md:w-1/2 text-left">
+                                <h2 class="text-2xl md:text-3xl font-bold">Siding Install</h2>
+                                <p class="mt-4 text-gray-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Adipiscing integer ultrices suspendisse varius etiam est. Est, felis, tempus nec
+                                    vitae orci sodales Metus, velit nec at diam in sed. Massa dui ipsum ornare sagittis
+                                    dolor sagittis amet odio est. Sit semper et velit fusce.</p>
+                                <ul class="mt-4 text-gray-300">
+                                    <li><i class="far fa-check-circle text-red-500"></i> Innovative Work Experience</li>
+                                    <li><i class="far fa-check-circle text-red-500"></i> 100% Satisfaction Guarantee
+                                    </li>
+                                    <li><i class="far fa-check-circle text-red-500"></i> Quality Expert Engineer</li>
+                                </ul>
+                                <button style="background-color: red; color: white;" class="btn btn-primary mt-4 font-bold py-3 px-8">READ
+                                    MORE</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="flex justify-between items-center bg-gray-300" style="height: 700px;">
+                    <img src='/sticker (1).png' />
+                    <img src='/sticker (2).png' />
+                </div>
+
+                <div class="flex justify-center mt-16 md:mt-20 form-overlay flex-wrap md:flex-nowrap"
+                    style="background-color: transparent;width: 100%;border-radius: 0%;box-shadow: none;">
+                    <div class="bg-red-500 text-white p-6 rounded-lg text-center flex items-center gap-8 justify-center"
+                        style="width: 100%;height: 10em;">
+                        <i class="fas fa-house text-4xl"></i>
+                        <div class="mt-2">
+                            <h1 class="text-4xl font-bold">932+</h1>
+                            <p class="font-bold">Project Complete</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-200 p-6 rounded-lg text-center flex items-center justify-center"
+                        style="width: 100%;height: 10em;">
+                        <img src="/support.png" alt="Support Icon" class="w-20 h-20 mx-auto">
+                        <div class="mt-2">
+                            <h1 class="text-4xl font-bold text-black">90+</h1>
+                            <p class="font-bold text-black">Experience Staff</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-red-500 text-white p-6 rounded-lg text-center flex items-center gap-8 justify-center"
+                        style="width: 100%;height: 10em;">
+                        <i class="fas fa-user text-4xl"></i>
+                        <div class="mt-2">
+                            <h1 class="text-4xl font-bold">620+</h1>
+                            <p class="font-bold">Satisfied Clients</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-200 p-6 rounded-lg text-center flex items-center justify-center"
+                        style="width: 100%;height: 10em;">
+                        <img src="/life-insurance.png" alt="Life Insurance Icon" class="w-20 h-20 mx-auto">
+                        <div class="mt-2">
+                            <h1 class="text-4xl font-bold text-black">20+</h1>
+                            <p class="font-bold text-black">Awards Win</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-gray-300 flex justify-between items-center p-0 md:p-20 flex-wrap md:flex-nowrap">
+            <div class="p-5">
+                <p class="text-red-600 font-bold">WHY CHOOSE ROOFTOX</p>
+                <h1 class="text-3xl md:text-4xl">Why Choose RoofTox For Roofing Service.</h1>
+                <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing integer
+                    suspendisse varius etiam est tempus nec vitae orci sodales.</p>
+                <div class="flex justify-center gap-5">
+                    <div class="flex items-center gap-5">
+                        <div class="bg-blue-200 w-20 h-20 rounded-full flex justify-center items-center">
+                            <i class="fa-solid fa-user text-indigo-900 text-3xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl">Expert Engineer</h3>
+                            <p class="text-lg">Suspendisse varius etiam tempus nec vitae.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-5">
+                        <div class="bg-blue-200 w-20 h-20 rounded-full flex justify-center items-center">
+                            <img src="pillar.png" alt="pillar" class="h-10">
+                        </div>
+                        <div>
+                            <h3 class="text-xl">Quality Materials</h3>
+                            <p class="text-lg">Suspendisse varius etiam tempus nec vitae.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center gap-5 mt-5">
+                    <div class="flex items-center gap-5">
+                        <div class="bg-blue-200 w-20 h-20 rounded-full flex justify-center items-center">
+                            <i class="fa-solid fa-house text-3xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl">Required Works</h3>
+                            <p class="text-lg">Suspendisse varius etiam tempus nec vitae.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-5">
+                        <div class="bg-blue-200 w-20 h-20 rounded-full flex justify-center items-center">
+                            <img src="life-insurance.png" alt="life" class="h-10">
+                        </div>
+                        <div>
+                            <h3 class="text-xl">Fully Insured</h3>
+                            <p class="text-lg">Suspendisse varius etiam tempus nec vitae.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="man.png" alt="image" class="md:img-fluid">
+            </div>
+        </section>
+        <br><br><br>
+        <section class="flex justify-center">
+            <div class="flex justify-evenly flex-wrap md:flex-nowrap gap-10">
+                <img src="some.png" alt="image" style="width: 300px;">
+                <img src="some1.png" alt="image" style="width: 300px;">
+                <img src="somes (1).png" alt="image" style="width: 300px;">
+                <img src="somes (2).png" alt="image" style="width: 300px;">
+            </div>
+        </section>
+        <br><br><br><br>
+        <section class="text-center">
+            <p class="font-bold text-red-500 text-5xl">EXPERT TEAM</p>
+            <h1 class="text-black text-2xl">We Have A Professional<br> Team Member</h1>
+            <div class="flex justify-center flex-wrap">
+                <div class="max-w-xs mx-4 my-8" id="container">
+                    <div>
+                        <img src="worker (1).png" alt="image" class="mx-auto">
+                        <div class="h-8"></div>
+                    </div>
+                    <div class="text-center form-overlay">
+                        <h3 class="my-2 text-2xl">Guy Hawkins</h3>
+                        <p class="text-sm text-red-500">Worker</p>
+                    </div>
+                </div>
+                <div class="max-w-xs mx-4 my-8" id="container">
+                    <div>
+                        <img src="worker (2).png" alt="image" class="mx-auto">
+                        <div class="h-8"></div>
+                    </div>
+                    <div class="text-center form-overlay">
+                        <h3 class="my-2 text-2xl">Cody Fisher</h3>
+                        <p class="text-sm text-red-500">Consultant</p>
+                    </div>
+                </div>
+                <div class="max-w-xs mx-4 my-8" id="container">
+                    <div>
+                        <img src="worker (3).png" alt="image" class="mx-auto">
+                        <div class="h-8"></div>
+                    </div>
+                    <div class="text-center form-overlay">
+                        <h3 class="my-2 text-2xl">Brooklyn Simmons</h3>
+                        <p class="text-sm text-red-500">Founder</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="text-center bg-gray-900 py-16">
+            <div class="py-12">
+                <p class="font-bold text-red-500 text-3xl">WORK PROCESS</p>
+                <h1 class="text-white mt-4 text-2xl">3 Easy Steps to Get<br> Quick Help</h1>
+            </div>
+            <div class="flex justify-center flex-wrap gap-8">
+                <div class="text-center bg-gray-600 rounded-lg p-8 w-72">
+                    <div class="h-24 w-24 bg-red-500 rounded-full flex items-center justify-center mx-auto">
+                        <i class="fas fa-user text-white text-3xl"></i>
+                    </div>
+                    <h2 class="text-white mt-4 text-2xl">Get<br> Consultation</h2>
+                </div>
+                <div class="text-center bg-gray-600 rounded-lg p-8 w-72">
+                    <div class="h-24 w-24 bg-red-500 rounded-full flex items-center justify-center mx-auto">
+                        <i class="fas fa-pen-ruler text-white text-3xl"></i>
+                    </div>
+                    <h2 class="text-white mt-4 text-2xl">Install New<br> Roof</h2>
+                </div>
+                <div class="text-center bg-gray-600 rounded-lg p-8 w-72">
+                    <div class="h-24 w-24 bg-red-500 rounded-full flex items-center justify-center mx-auto">
+                        <i class="fas fa-file-signature text-white text-3xl"></i>
+                    </div>
+                    <h2 class="text-white mt-4 text-2xl">Relax & Enjoy<br> Roofing</h2>
+                </div>
+            </div>
+        </section>
+        <section class="bg-red-500 py-10 px-20">
+            <div class="flex justify-evenly flex-wrap gap-2">
+                <img src="icon (1).png" alt="image">
+                <img src="icon (2).png" alt="image">
+                <img src="icon (1).png" alt="image">
+                <img src="icon (2).png" alt="image">
+            </div>
+        </section>
+        <br><br><br><br>
+        <section class="text-center">
+            <p class="font-bold text-red-500 text-4xl">ARTICLE</p>
+            <h1 class="text-3xl font-bold">Get More Update From<br>RoofTox</h1>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 p-4">
+                <div class="card m-3 shadow-lg">
+                    <img src="roof (3).png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title text-4xl">How to Handle Unexpected Situations on Road</h3>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-gray-600">Last updated 3 mins ago</small></p>
+                        <hr class="my-4 border-gray-300">
+                        <a href="#" class="text-gray-600">READ MORE</a>
+                    </div>
+                </div>
+                <div class="card m-3 shadow-lg">
+                    <img src="roof (2).png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title text-4xl">How to Handle Unexpected Situations on Road</h3>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                            content.</p>
+                        <p class="card-text"><small class="text-gray-600">Last updated 3 mins ago</small></p>
+                        <hr class="my-4 border-gray-300">
+                        <a href="#" class="text-gray-600">READ MORE</a>
+                    </div>
+                </div>
+                <div class="card m-3 shadow-lg">
+                    <img src="roof (1).png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title text-4xl">How to Handle Unexpected Situations on Road</h3>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This card has even longer content than the first to show that equal
+                            height action.</p>
+                        <p class="card-text"><small class="text-gray-600">Last updated 3 mins ago</small></p>
+                        <hr class="my-4 border-gray-300">
+                        <a href="#" class="text-gray-600">READ MORE</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br><br><br><br>
+    </main>
+    <footer class="bg-gray-900 text-white text-center">
+        <br><br>
+        <div class="container mx-auto">
+            <div style="display: flex;justify-content: center;">
+                <div id="container" style="width: 90%;height: 40vh;box-shadow:0 4px 8px whitesmoke;">
+                    <img src="house.png" alt="Background Image" class="background-image" style="height: 40vh;">
+                    <div class="overlay" style="height: 100%;">
+                        <div class="content">
+                            <h1 class="text-3xl">Our Newsletters</h1>
+                            <form action="#" method="POST">
+                                <input type="text" name="email" placeholder="Your Email" required style="  padding: 10px;
+                                margin: 5px;
+                                border: none;
+                                border-radius: 5px;">
+                                <button type="submit" style="  padding: 10px;
+                                margin: 5px;
+                                border: none;
+                                border-radius: 5px;background-color: aliceblue;color: black;">SUBSCRIBE NOW</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br><br>
+            <div class="col-span-1 md:col-span-1 flex justify-between items-center md:items-start">
+                <div class="flex items-center mb-4">
+                    <img src="roof.png" alt="Logo" class="w-12">
+                    <div class="ml-3">
+                        <h2 class="text-white text-lg">Roofer</h2>
+                        <p class="text-gray-400">Roof services</p>
+                    </div>
+                </div>
+                <div class="text-center md:text-left">
+                    <a href="#" class="text-white mx-2"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+            <br><br>
+            <hr class="border-gray-600 my-4">
+            <br><br><br><br>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-1 mb-4">
+                    <h2 class="text-white text-3xl">Get In Touch</h2><br>
+                    <p class="text-gray-400">Tincidunt neque pretium lectus donec risus.</p>
+                    <p><strong>Add:</strong> New Hyde Park, NY 11040</p>
+                    <p><strong>Email:</strong> example@gmail.com</p>
+                    <p><strong>Phone:</strong> 333 666 0000</p>
+                    <div class="flex items-center mt-4 justify-center">
+                        <a href="#" class="text-white mx-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white mx-2"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-span-1 md:col-span-1 mb-4">
+                    <h2 class="text-white text-3xl">Links</h2><br>
+                    <p><a href="#" class="text-gray-400">About Us</a></p>
+                    <p><a href="#" class="text-gray-400">Services</a></p>
+                    <p><a href="#" class="text-gray-400">Case</a></p>
+                    <p><a href="#" class="text-gray-400">Roof Repair</a></p>
+                    <p><a href="#" class="text-gray-400">Contact Us</a></p>
+                </div>
+                <div class="col-span-1 md:col-span-1 mb-4">
+                    <h2 class="text-white text-3xl">Working Hours</h2><br>
+                    <p class="text-gray-400">Tincidunt neque pretium lectus donec risus.</p>
+                    <p>Mon - Fri: 9:00AM - 6:00PM</p>
+                    <p>Sat - Sun: 8:00AM - 4:00PM</p>
+                </div>
+                <div class="col-span-1 md:col-span-1 mb-4">
+                    <h2 class="text-white text-3xl">Follow Instagram</h2><br>
+                    <div class="flex flex-col gap-3 items-center">
+                        <div class="flex gap-3">
+                            <img src="roof (2).png" alt="Worker Image" class="w-24 h-24 object-cover rounded-full">
+                            <img src="roof (3).png" alt="Worker Image" class="w-24 h-24 object-cover rounded-full">
+                            <img src="roof (1).png" alt="Worker Image" class="w-24 h-24 object-cover rounded-full">
+                        </div>
+                        <div class="flex gap-3">
+                            <img src="roofer.png" alt="Background Image" class="w-24 h-24 object-cover rounded-full">
+                            <img src="roofer.png" alt="Background Image" class="w-24 h-24 object-cover rounded-full">
+                            <img src="roofer.png" alt="Background Image" class="w-24 h-24 object-cover rounded-full">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+        <div class="bg-gray-800 text-center py-3">
+            <p class="text-gray-400">Copyright 2024 by Roofer theme All Right Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('navbar-toggler').addEventListener('click', function () {
+            var navMenu = document.getElementById('navbarSupportedContent');
+            navMenu.classList.toggle('hidden');
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = document.querySelectorAll('[data-tab-target]');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function () {
+                    const targetTabId = this.getAttribute('data-tab-target');
+                    const targetTabContent = document.getElementById(targetTabId);
+
+                    if (targetTabContent) {
+                        const allTabContents = document.querySelectorAll('.tab-pane');
+                        allTabContents.forEach(content => {
+                            content.classList.add('hidden');
+                        });
+
+                        targetTabContent.classList.remove('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

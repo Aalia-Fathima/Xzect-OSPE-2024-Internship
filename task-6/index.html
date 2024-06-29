@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap linking through cdnjs -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!-- for font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body {
+        overflow-x: hidden;
+    }
+
+    #container {
+        position: relative;
+        width: 100%;
+    }
+
+    .background-image {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100vh;
+        background-color: red;
+        clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content {
+        color: white;
+        text-align: center;
+        padding: 20px;
+        max-width: 80%;
+
+    }
+
+    .form-overlay {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        width: 60%;
+        transform: translateX(-50%);
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    }
+
+    .form-overlay input,
+    .form-overlay select,
+    .form-overlay button {
+        padding: 10px;
+        margin: 5px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .form-overlay button {
+        background-color: red;
+        color: white;
+        cursor: pointer;
+    }
+
+    p {
+        line-height: 25px;
+        margin-bottom: 20px;
+        word-wrap: break-word;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="d-flex justify-content-between bg-dark p-4 text-white flex-wrap" style="width: 100%;">
+            <div class="d-flex text-white flex-wrap">
+                <p class="mb-0 me-5">2464 Royal Ln. Mesa, New Jersey 45463</p>
+                <p class="mb-0 me-5">info@example.com</p>
+                <p class="me-0">+91-213-666-0027</p>
+            </div>
+            <div class="d-flex align-items-center text-white">
+                <p class="mb-0 me-4"><a class="text-white">Login</a></p>
+                <i class="fab fa-facebook-f fa-lg me-3"></i>
+                <i class="fab fa-twitter fa-lg me-3"></i>
+                <i class="fab fa-linkedin fa-lg me-3"></i>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="roof.png" alt="Roof Icon" style="width: 100px; height: auto;">
+                    <div>
+                        <h3 class="p-0 m-0">Roofer</h3>
+                        <p class="p-0 m-0">Roof Service</p>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <button style="background-color: red;" class="btn btn-primary">Free Estimate</button>
+        </nav>
+
+    </header>
+    <main>
+        <section>
+            <div id="container">
+                <img src="roofer.png" alt="Background Image" class="background-image">
+                <div class="overlay">
+                    <div class="content">
+                        <h1>BEST ROOFING SERVICE & CONSULTING</h1>
+                        <p style="word-wrap: break-word;">Lorem ipsum dolor sit amet, consectetur adipiscing elit Turpis
+                            ridiculus tellus.hdfhfhf</p>
+                        <button class="btn btn-primary bg-light text-dark">MAKE APPOINTMENT</button>
+                    </div>
+                </div>
+                <div style="height: 400px;"></div>
+                <div class="form-overlay" style="text-align: center;">
+                    <h1>REQUEST FOR A SERVICE</h1>
+                    <form action="#" method="POST">
+                        <input type="text" name="name" placeholder="Name" required>
+                        <input type="text" name="email" placeholder="Your Email" required>
+                        <input type="text" name="phone" placeholder="Phone Number" required>
+                        <button type="submit">SUBMIT NOW</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <br><br>
+        <section class="d-flex justify-content-center align-items-center p-4 text-center flex-wrap">
+            <div style="width: 25em;" class="p-4">
+                <div><i class="fas fa-user" style="color: red; font-size: 3em;"></i></div>
+                <br>
+                <h3>Expert Engineer</h3>
+                <p>Suspndisse varius etiam est vitae dui tempus nec vitae orci sodales metus velit nec at diam in sed.
+                </p>
+            </div>
+            <div style="width: 25em;" class="p-4">
+                <div><i class="fas fa-pen-ruler" style="color: red; font-size: 3em;"></i></div>
+                <br>
+                <h3>Quality Materials</h3>
+                <p>Suspndisse varius etiam est vitae dui tempus nec vitae orci sodales metus velit nec at diam in sed.
+                </p>
+            </div>
+            <div style="width: 25em;" class="p-4">
+                <div><i class="fas fa-file-signature" style="color: red; font-size: 3em;"></i></div>
+                <br>
+                <h3>Free Estimates</h3>
+                <p>Suspndisse varius etiam est vitae dui tempus nec vitae orci sodales metus velit nec at diam in sed.
+                </p>
+            </div>
+        </section>
+        <br><br><br>
+        <section class="d-flex align-items-center justify-content-center p-3 flex-md-nowrap flex-wrap">
+            <div style="gap: 20px;" class="d-flex flex-md-nowrap flex-wrap p-3 justify-content-center">
+                <div>
+                    <img src="roof (1).png" alt="Worker Image" style="height: 500px;width:300px;">
+                </div>
+                <div style="display: flex;flex-direction: column;gap: 20px;">
+                    <img src="roof (2).png" alt="Worker Image" style="height: 200px;width:300px;">
+                    <img src="roof (3).png" alt="Worker Image" style="height: 280px;width:300px;">
+                </div>
+            </div>
+            <div class="text-center">
+                <h3 style="color: red;">ABOUT ROOFTOX</h3>
+                <h1>Experienced & Quality More Than 30 Years</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing integer ultrices suspendisse
+                    varius etiam est. Est, felis, tempus nec vitae orci sodales Metus, velit nec at diam in sed. Massa
+                    dui ipsum ornare sagittis dolor sagittis amet odio est. Sit semper et velit fusce.</p>
+                <div class="d-flex justify-content-center">
+                    <div>
+                        <div><i class="fas fa-pen-ruler" style="color: red; font-size: 3em;"></i></div>
+                        <br>
+                        <h4>Quality Materials</h4>
+                        <p>Amet minim mollit deserunt ullamco sit enim.</p>
+                    </div>
+                    <div>
+                        <div><i class="fas fa-user" style="color: red; font-size: 3em;"></i></div>
+                        <br>
+                        <h4>Expert Engineer</h4>
+                        <p>Amet minim mollit deserunt ullamco sit enim.</p>
+                    </div>
+                </div>
+                <button style="background-color: red; color: white;" class="btn btn-primary">READ MORE</button>
+            </div>
+        </section>
+        <br><br>
+        <section class="text-center m-0 p-0">
+            <div id="container" style="background-color: #1b1a1a; padding-top: 40px;">
+                <p style="font-weight: bold; color: red;">OUR SERVICES</p>
+                <h1 style="color: aliceblue;">We’re Providing Quality<br> Roofing Services</h1>
+                <br>
+                <div class="d-flex justify-content-center">
+                    <div>
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation" style="border: #666 solid thin; padding: 10px;">
+                                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                                    aria-selected="true">Roof Cornering</button>
+                            </li>
+                            <li class="nav-item" role="presentation" style="border: #666 solid thin; padding: 10px;">
+                                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-profile" type="button" role="tab"
+                                    aria-controls="pills-profile" aria-selected="false">Roofing Layer</button>
+                            </li>
+                            <li class="nav-item" role="presentation" style="border: #666 solid thin; padding: 10px;">
+                                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-contact" type="button" role="tab"
+                                    aria-controls="pills-contact" aria-selected="false">Damage Repair</button>
+                            </li>
+                            <li class="nav-item" role="presentation" style="border: #666 solid thin; padding: 10px;"
+                                id="color">
+                                <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-disabled" type="button" role="tab"
+                                    aria-controls="pills-disabled" aria-selected="false">Siding Install</button>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <br><br>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                        aria-labelledby="pills-home-tab" tabindex="0">
+                        <div style="display: flex; justify-content: space-evenly; color: aliceblue; padding-bottom: 150px;padding-left: 20px;padding-right: 20px;gap: 20px;"
+                            class="flex-md-nowrap flex-wrap">
+                            <div>
+                                <img src="slide (3).png" alt="image" class="img-fluid" style="width: 100vw;">
+                            </div>
+                            <div style="font-size: medium;">
+                                <h2 style="font-size: 2.1em;">Roof Cornering</h2>
+                                <p style="font-weight: 400; color: antiquewhite;">Lorem ipsum dolor sit amet,
+                                    consectetur
+                                    adipiscing elit.
+                                    Adipiscing integer ultrices suspendisse varius etiam est. Est, felis, tempus nec
+                                    vitae
+                                    orci
+                                    sodales
+                                    Metus, velit nec at diam in sed. Massa dui ipsum ornare sagittis dolor sagittis amet
+                                    odio
+                                    est. Sit
+                                    semper et velit fusce.</p>
+                                <p><i class="fa-regular fa-circle-check" style="color: red;"></i> Innovative Work
+                                    Experience
+                                </p>
+                                <p><i class="fa-regular fa-circle-check" style="color: red;"></i> 100% Satisfaction
+                                    Guarantee
+                                </p>
+                                <p><i class="fa-regular fa-circle-check" style="color: red;"></i> Quality Expert
+                                    Engineer
+                                </p>
+                                <button style="background-color: red; color: aliceblue;" class="btn btn-primary">READ
+                                    MORE</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+                        tabindex="0">
+                        <div style="display: flex; justify-content: space-evenly; color: aliceblue; padding-bottom: 150px;padding-left: 20px;padding-right: 20px;gap: 20px;"
+                            class="flex-md-nowrap flex-wrap">
+                            <div>
+                                <img src="slide (2).png" alt="image" class="img-fluid" style="width: 100vw;">
+                            </div>
+                            <div style="font-size: medium;">
+                                <h2 style="font-size: 2.1em;">Roofing Layer</h2>
+                                <p style="font-weight: 400; color: antiquewhite;">Lorem ipsum dolor sit amet,
+                                    consectetur
+                                    adipiscing elit.
+                                    Adipiscing integer ultrices suspendisse varius etiam est. Est, felis, tempus nec
+                                    vitae orci
+                                    sodales
+                                    Metus, velit nec at diam in sed. Massa dui ipsum ornare sagittis dolor sagittis amet
+                                    odio
+                                    est. Sit
+                                    semper et velit fusce.</p>
+                                <p><i class="fa-regular fa-circle-check" style="color: red;"></i> Innovative Work
+                                    Experience</p>
+                                <p><i class="fa-regular fa-circle-check" style="color: red;"></i> 100% Satisfaction
+                                    Guarantee
+                                </p>
+                                <p><i class="fa-regular fa-circle-check" style="color: red;"></i> Quality Expert
+                                    Engineer</p>
+                                <button style="background-color: red; color: aliceblue;" class="btn btn-primary">READ
+                                    MORE</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"
+                        tabindex="0">
+                        <div style="display: flex; justify-content: space-evenly; color: aliceblue; padding-bottom: 150px;padding-left: 20px;padding-right: 20px;gap: 20px;"
+                            class="flex-md-nowrap flex-wrap">
+                            <div>
+                                <img src="slide (1).png" alt="image" class="img-fluid" style="width: 100vw;">
+                            </div>
+                            <div style="font-size: medium;">
+                                <h2 style="font-size: 2.1em;">Damage Repair</h2>
+                                <p style="font-weight: 400; color: antiquewhite;">Lorem ipsum dolor sit amet,
+                                    consectetur
+                                    adipiscing elit.
+                                    Adipiscing integer ultrices suspendisse varius etiam est. Est, felis, tempus nec
+                                    vitae orci
+                                    sodales
+                                    Metus, velit nec at diam in sed. Massa dui ipsum ornare sagittis dolor sagittis amet
+                                    odio
+                                    est. Sit
+                                    semper et velit fusce.</p>
+                                <p><i class="fa-regular fa-circle-check" style="color: red;"></i> Innovative Work
+                                    Experience</p>
+                                <p><i class="fa-regular fa-circle-check" style="color: red;"></i> 100% Satisfaction
+                                    Guarantee
+                                </p>
+                                <p><i class="fa-regular fa-circle-check" style="color: red;"></i> Quality Expert
+                                    Engineer</p>
+                                <button style="background-color: red; color: aliceblue;" class="btn btn-primary">READ
+                                    MORE</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab"
+                        tabindex="0">
+                        <div style="display: flex; justify-content: space-evenly; color: aliceblue; padding-bottom: 150px;padding-left: 20px;padding-right: 20px;gap: 20px;"
+                            class="flex-md-nowrap flex-wrap">
+                            <div>
+                                <img src="WORK.png" alt="image" class="img-fluid" style="width: 100vw;">
+                            </div>
+                            <div style="font-size: medium;">
+                                <h2 style="font-size: 2.1em;">Siding Install</h2>
+                                <p style="font-weight: 400; color: antiquewhite;">Lorem ipsum dolor sit amet,
+                                    consectetur
+                                    adipiscing elit.
+                                    Adipiscing integer ultrices suspendisse varius etiam est. Est, felis, tempus nec
+                                    vitae orci
+                                    sodales
+                                    Metus, velit nec at diam in sed. Massa dui ipsum ornare sagittis dolor sagittis amet
+                                    odio
+                                    est. Sit
+                                    semper et velit fusce.</p>
+                                <p><i class="fa-regular fa-circle-check" style="color: red;"></i> Innovative Work
+                                    Experience</p>
+                                <p><i class="fa-regular fa-circle-check" style="color: red;"></i> 100% Satisfaction
+                                    Guarantee
+                                </p>
+                                <p><i class="fa-regular fa-circle-check" style="color: red;"></i> Quality Expert
+                                    Engineer</p>
+                                <button style="background-color: red; color: aliceblue;" class="btn btn-primary">READ
+                                    MORE</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="height: 550px; background-color: rgb(226, 206, 206)" class="d-flex justify-content-between">
+                    <img src='/sticker (1).png' class='img-fluid' style="width:50%;height:500px" />
+                    <img src='/sticker (2).png' class='img-fluid' style="width:50%;height:400px" />
+                </div>
+                <div class="d-flex justify-content-evenly align-items-center flex-md-nowrap flex-wrap form-overlay"
+                    style="background-color: transparent; box-shadow: none; width: 95vw">
+                    <div class="p-3 d-flex align-items-center bg-danger rounded justify-content-center"
+                        style="width: 100%">
+                        <div>
+                            <i class="fa-solid fa-house" style="color: aliceblue;font-size: xx-large;"></i>
+                        </div>
+                        <div class="text-light ms-3">
+                            <h1 style=" font-size: 3.1em ; margin: 0">932+</h1>
+                            <p style="font-weight: bold ; margin: 0">Project Complete</p>
+                        </div>
+                    </div>
+                    <div class="p-3 d-flex align-items-center bg-light rounded justify-content-center"
+                        style="width: 100%">
+                        <div>
+                            <Image src="/support.png" alt="image" width="80px" height="80px" />
+                        </div>
+                        <div class="ms-3">
+                            <h1 style=" font-size: 3.1em ; margin: 0 ;color: black">90+</h1>
+                            <p style=" font-weight: bold ; margin: 0;color: black ">Experience Staff</p>
+                        </div>
+                    </div>
+                    <div class="p-3 d-flex align-items-center bg-danger rounded justify-content-center"
+                        style="width: 100%">
+                        <div>
+                            <i class="fa-solid fa-user" style="color: aliceblue;font-size: xx-large;"></i>
+                        </div>
+                        <div class="text-light ms-3">
+                            <h1 style=" font-size: 3.1em ; margin: 0 ">620+</h1>
+                            <p style="font-weight: bold ; margin: 0">Satisfied Clients</p>
+                        </div>
+                    </div>
+                    <div class="p-3 d-flex align-items-center bg-light rounded justify-content-center"
+                        style="width: 100%">
+                        <div>
+                            <Image src="/life-insurance.png" alt="life" width="80px" height="80px" />
+                        </div>
+                        <div class="text-dark ms-3">
+                            <h1 style=" font-size: 3.1em ; margin: 0 ">20+</h1>
+                            <p style="font-weight: bold ; margin: 0">Awards Win</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section style="background-color: rgb(226, 206, 206);"
+            class="d-flex justify-content-evenly align-items-center m-0 p-0 flex-md-nowrap flex-wrap">
+            <div style="padding: 20px;">
+                <p style="color: red; font-weight: bold;">WHY CHOOSE ROOFTOX</p>
+                <h1>Why Choose RoofTox For Roofing Service.</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing integer suspendisse varius etiam
+                    est tempus nec vitae orci sodales.</p>
+                <div class="d-flex justify-content-center gap-5">
+                    <div style="gap: 20px;" class="d-flex justify-content-center align-items-center">
+                        <div class="d-flex justify-content-center align-items-center"
+                            style="background-color: aliceblue; width: 90px; height: 90px; border-radius: 20px;">
+                            <i class="fa-solid fa-user" style="color: #11053b; font-size: 50px;"></i>
+                        </div>
+                        <div>
+                            <h3>Expert Engineer</h3>
+                            <p>Suspendisse varius etiam tempus nec vitae.</p>
+                        </div>
+                    </div>
+                    <div style="gap: 20px;" class="d-flex justify-content-center align-items-center">
+                        <div class="d-flex justify-content-center align-items-center"
+                            style="background-color: aliceblue; width: 90px; height: 90px; border-radius: 20px;">
+                            <img src="pillar.png" alt="pillar" style="height: 50px;">
+                        </div>
+                        <div>
+                            <h3>Quality Materials</h3>
+                            <p>Suspendisse varius etiam tempus nec vitae.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center gap-5">
+                    <div style="gap: 20px;" class="d-flex justify-content-center align-items-center">
+                        <div class="d-flex justify-content-center align-items-center"
+                            style="background-color: aliceblue; width: 90px; height: 90px; border-radius: 20px;">
+                            <i class="fa-solid fa-house" style="font-size: 2em;"></i>
+                        </div>
+                        <div>
+                            <h3>Required Works</h3>
+                            <p>Suspendisse varius etiam tempus nec vitae.</p>
+                        </div>
+                    </div>
+                    <div style="gap: 20px;" class="d-flex justify-content-center align-items-center">
+                        <div class="d-flex justify-content-center align-items-center"
+                            style="background-color: aliceblue; width: 90px; height: 90px; border-radius: 20px;">
+                            <img src="life-insurance.png" alt="life" style="height: 50px;">
+                        </div>
+                        <div>
+                            <h3>Fully Insured</h3>
+                            <p>Suspendisse varius etiam tempus nec vitae.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="man.png" alt="image" class="img-fluid">
+            </div>
+        </section>
+        <br><br><br>
+        <section>
+            <div class="d-flex justify-content-evenly flex-md-nowrap flex-wrap">
+                <img src="some.png" alt="image" style="width: 300px;">
+                <img src="some1.png" alt="image" style="width: 300px;">
+                <img src="somes (1).png" alt="image" style="width: 300px;">
+                <img src="somes (2).png" alt="image" style="width: 300px;">
+            </div>
+        </section>
+        <br><br><br><br>
+        <section class="text-center">
+            <p style="font-weight: bold;color: red;">EXPERT TEAM</p>
+            <h1 style="color: #000;">We Have A Professional<br>
+                Team Member<h1><br>
+                    <div class="d-flex justify-content-evenly flex-md-nowrap flex-wrap">
+                        <div id="container">
+                            <div>
+                                <img src="worker (1).png" alt="image">
+                                <div style="height: 50px;"></div>
+                            </div>
+                            <div class="form-overlay" style="text-align: center;padding: 20px;">
+                                <h3 style="padding: 0%;margin: 10px;">Guy Hawkins</h3>
+                                <p style="font-size: small;padding: 0%;margin: 10px;color: red;">Worker</p>
+                            </div>
+                        </div>
+                        <div id="container">
+                            <div>
+                                <img src="worker (2).png" alt="image">
+                                <div style="height: 50px;"></div>
+                            </div>
+                            <div class="form-overlay" style="text-align: center;padding: 20px;">
+                                <h3 style="padding: 0%;margin: 10px;">Cody Fisher</h3>
+                                <p style="font-size: small;padding: 0%;margin: 10px;color: red;">Consultant</p>
+                            </div>
+                        </div>
+                        <div id="container">
+                            <div>
+                                <img src="worker (3).png" alt="image">
+                                <div style="height: 50px;"></div>
+                            </div>
+                            <div class="form-overlay" style="text-align: center;padding: 20px;">
+                                <h3 style="padding: 0%;margin: 10px;">Brooklyn Simmons</h3>
+                                <p style="font-size: small;padding: 0%;margin: 10px;color: red;">Founder</p>
+                            </div>
+                        </div>
+                    </div>
+        </section>
+        <section style="text-align: center;background-color: #1b1a1a;padding-top: 40px;padding-bottom: 40px;">
+            <br>
+            <p style="font-weight: bold;color: red;">WORK PROCESS</p>
+            <h1 style="color: aliceblue;">3 Easy Steps to Get<br>
+                Quick Help</h1><br><br>
+            <div class="d-flex justify-content-evenly flex-wrap gap-2">
+                <div style="text-align: center;background-color: #666;padding: 20px;border-radius: 20px; width:20em;"
+                    class="d-flex flex-column align-items-center text-center">
+                    <div style="height: 100px;width: 100px;border-radius: 100px;background-color: red;"
+                        class="d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-user" style="color: aliceblue;font-size: xx-large;"></i>
+                    </div>
+                    <h2 style="color: aliceblue;">Get<br> Consultation</h2>
+                </div>
+                <div style="text-align: center;background-color: #666;width:20em;padding: 20px;border-radius: 20px;"
+                    class="d-flex flex-column align-items-center text-center">
+                    <div style="height: 100px;width: 100px;border-radius: 100px;background-color: red;"
+                        class="d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-pen-ruler" style="color: aliceblue;font-size: xx-large;"></i>
+                    </div>
+                    <h2 style="color: aliceblue;">Install New<br> Roof</h2>
+                </div>
+                <div style="background-color: #666;width:20em;padding: 20px;border-radius: 20px;"
+                    class="d-flex flex-column align-items-center text-center">
+                    <div style="height: 100px;width: 100px;border-radius: 100px;background-color: red;"
+                        class="d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-file-signature" style="color: aliceblue;font-size: xx-large;"></i>
+                    </div>
+                    <h2 style="color: aliceblue;">Relax & Enjoy<br> Roofing</h2>
+                </div>
+            </div>
+        </section>
+        <section style="background-color: red;padding: 40px;">
+            <div class="d-flex justify-content-evenly flex-wrap gap-2">
+                <img src="icon (1).png" alt="image">
+                <img src="icon (2).png" alt="image">
+                <img src="icon (1).png" alt="image">
+                <img src="icon (2).png" alt="image">
+            </div>
+        </section>
+        <br><br><br><br>
+        <section class="text-center">
+            <p style="font-weight: bold;color: red;">ARTICLE</p>
+            <h1>Get More Update From<br>
+                RoofTox</h1>
+            <div class="card-group p-3">
+                <div class="card m-3">
+                    <img src="roof (3).png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">How to Handle Unexpected Situations on Road</h3>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        <hr
+                            style="margin: 20px;  height: 0.1px;border: thin;color: rgb(178, 192, 200);background-color: rgb(178, 192, 200);">
+                        <a href="#" style="text-decoration: none;color: #666;">READ MORE</a>
+                    </div>
+                </div>
+                <div class="card m-3">
+                    <img src="roof (2).png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">How to Handle Unexpected Situations on Road</h3>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                            content.</p>
+                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        <hr
+                            style="margin: 20px;  height: 0.1px;border: thin;color: rgb(178, 192, 200);background-color: rgb(178, 192, 200);">
+                        <a href="#" style="text-decoration: none;color: #666;">READ MORE</a>
+                    </div>
+                </div>
+                <div class="card m-3">
+                    <img src="roof (1).png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">How to Handle Unexpected Situations on Road</h3>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This card has even longer content than the first to show that equal
+                            height action.</p>
+                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        <hr
+                            style="margin: 20px;  height: 0.1px;border: thin;color: rgb(178, 192, 200);background-color: rgb(178, 192, 200);">
+                        <a href="#" style="text-decoration: none;color: #666;">READ MORE</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br><br><br><br>
+
+    </main>
+    <footer class="bg-dark text-light py-5 p-4">
+        <div id="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10">
+                    <div class="card shadow">
+                        <img src="house.png" class="card-img" alt="Background Image"
+                            style="height: 40vh; object-fit: cover;">
+                        <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                            <div class="text-center">
+                                <h1>Our Newsletters</h1>
+                                <form action="#" method="POST" class="form-inline justify-content-center">
+                                    <div class="form-group mb-2">
+                                        <input type="email" class="form-control" name="email" placeholder="Your Email"
+                                            required>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary mb-2 ml-2">SUBSCRIBE NOW</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br><br>
+            <div class="row justify-content-between align-items-center my-4">
+                <div class="col-md-6 d-flex align-items-center">
+                    <img src="roof.png" alt="Logo" class="img-fluid" style="width: 100px;">
+                    <div class="ml-3">
+                        <h2 class="text-light">Roofer</h2>
+                        <p class="text-light mb-0">Roof services</p>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center text-md-right">
+                    <a href="#" class="text-light mx-2"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-light mx-2"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-light mx-2"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-light mx-2"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-light mx-2"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+            <br><br><br>
+            <hr class="border-light my-4">
+            <br><br>
+            <div class="row text-center text-md-left">
+                <div class="col-md-3 mb-4">
+                    <h2>Get In Touch</h2>
+                    <p>Tincidunt neque pretium lectus donec risus.</p>
+                    <p><strong>Add:</strong> New Hyde Park, NY 11040</p>
+                    <p><strong>Email:</strong> example@gmail.com</p>
+                    <p><strong>Phone:</strong> 333 666 0000</p>
+                    <div>
+                        <a href="#" class="text-light mx-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-light mx-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light mx-2"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h2>Links</h2>
+                    <p>About Us</p>
+                    <p>Services</p>
+                    <p>Case</p>
+                    <p>Roof Repair</p>
+                    <p>Contact Us</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h2>Working Hours</h2>
+                    <p>Tincidunt neque pretium lectus donec risus.</p>
+                    <p>Mon - Fri: 9:00AM - 6:00PM</p>
+                    <p>Sat - Sun: 8:00AM - 4:00PM</p>
+                </div>
+                <div class="col-md-3 mb-4 p-4">
+                    <h2>Follow Instagram</h2><br>
+                    <div class="d-flex flex-column gap-3 align-items-center">
+                        <div class="d-flex gap-3">
+                            <img src="roof (2).png" alt="Worker Image" class="img-fluid"
+                                style="width: 100px; height: 100px;">
+                            <img src="roof (3).png" alt="Worker Image" class="img-fluid"
+                                style="width: 100px; height: 100px;">
+                            <img src="roof (1).png" alt="Worker Image" class="img-fluid"
+                                style="width: 100px; height: 100px;">
+                        </div>
+                        <div class="d-flex gap-3">
+                            <img src="roofer.png" alt="Background Image" class="img-fluid"
+                                style="width: 100px; height: 100px;">
+                            <img src="roofer.png" alt="Background Image" class="img-fluid"
+                                style="width: 100px; height: 100px;">
+                            <img src="roofer.png" alt="Background Image" class="img-fluid"
+                                style="width: 100px; height: 100px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-dark text-center py-3">
+            <p class="mb-0">Copyright 2024 by Roofer theme All Right Reserved.</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
