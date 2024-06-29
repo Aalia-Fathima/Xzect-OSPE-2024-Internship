@@ -45,11 +45,11 @@ git clone https://github.com/Aalia-Fathima/Xzect-task-8-repo.git
 ```
 ## Technologies Used
 
-**HTML:** Used in all tasks to structure the content.<br>
-**CSS:** Used in Task 5 for styling.<br>
-**Bootstrap:** Used in Task 6 for responsive design.<br>
-**Tailwind CSS:** Used in Task 7 for utility-first styling.<br>
-**Next.js:** Used in Task 8 for building a server-rendered React application.<br>
+**HTML:**  Used in all tasks to structure the content.<br>
+**CSS:**  Used in Task 5 for styling.<br>
+**Bootstrap:**  Used in Task 6 for responsive design.<br>
+**Tailwind CSS:**  Used in Task 7 for utility-first styling.<br>
+**Next.js:**  Used in Task 8 for building a server-rendered React application.<br>
 
 ## License
 This project is licensed under the MIT License.
