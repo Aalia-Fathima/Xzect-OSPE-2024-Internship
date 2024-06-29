@@ -34,12 +34,14 @@ To get started with any of the tasks, clone the respective repository using the 
 
 ```sh
 # Clone the main repository
-git clone https://github.com/yourusername/main-repo.git
+git clone [https://github.com/Aalia-Fathima/Xzect-OSPE-2024-Internship.git](https://github.com/Aalia-Fathima/Xzect-OSPE-2024-Internship.git)
 
 # Initialize and update submodules
-cd main-repo
-git submodule init
-git submodule update
+cd tasks-5
+cd task-6
+cd task-7
+//for task 8
+git clone [https://github.com/Aalia-Fathima/Xzect-OSPE-2024-Internship.git](https://github.com/Aalia-Fathima/Xzect-OSPE-2024-Internship.git)
 
 # Navigate to a specific task folder
 cd task-5-html-css  # or any other task folder
