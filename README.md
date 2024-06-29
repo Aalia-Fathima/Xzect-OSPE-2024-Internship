@@ -36,26 +36,21 @@ To get started with any of the tasks, clone the respective repository using the 
 # Clone the main repository
 git clone [https://github.com/Aalia-Fathima/Xzect-OSPE-2024-Internship.git](https://github.com/Aalia-Fathima/Xzect-OSPE-2024-Internship.git)
 
-# Initialize and update submodules
+# Navigate to a specific task folder
 cd tasks-5
 cd task-6
 cd task-7
-//for task 8
-git clone [https://github.com/Aalia-Fathima/Xzect-OSPE-2024-Internship.git](https://github.com/Aalia-Fathima/Xzect-OSPE-2024-Internship.git)
+# for task 8
+git clone [https://github.com/Aalia-Fathima/Xzect-task-8-repo.git](https://github.com/Aalia-Fathima/Xzect-task-8-repo.git)
+```
+## Technologies Used
 
-# Navigate to a specific task folder
-cd task-5-html-css  # or any other task folder
-Technologies Used
+**HTML:** Used in all tasks to structure the content.
+**CSS:** Used in Task 5 for styling.
+**Bootstrap:** Used in Task 6 for responsive design.
+**Tailwind CSS:** Used in Task 7 for utility-first styling.
+**Next.js:** Used in Task 8 for building a server-rendered React application.
 
-HTML: Used in all tasks to structure the content.
-CSS: Used in Task 5 for styling.
-Bootstrap: Used in Task 6 for responsive design.
-Tailwind CSS: Used in Task 7 for utility-first styling.
-Next.js: Used in Task 8 for building a server-rendered React application.
-License
+## License
+This project is licensed under the MIT License.
 
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-Contact
-
-For any questions or feedback, feel free to reach out to me at your.email@example.com.
