@@ -34,14 +34,14 @@ To get started with any of the tasks, clone the respective repository using the 
 
 ```sh
 # Clone the main repository
-git clone [https://github.com/Aalia-Fathima/Xzect-OSPE-2024-Internship.git](https://github.com/Aalia-Fathima/Xzect-OSPE-2024-Internship.git)
+git clone https://github.com/Aalia-Fathima/Xzect-OSPE-2024-Internship.git
 
 # Navigate to a specific task folder
 cd tasks-5
 cd task-6
 cd task-7
 # for task 8
-git clone [https://github.com/Aalia-Fathima/Xzect-task-8-repo.git](https://github.com/Aalia-Fathima/Xzect-task-8-repo.git)
+git clone https://github.com/Aalia-Fathima/Xzect-task-8-repo.git
 ```
 ## Technologies Used
 
