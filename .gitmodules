@@ -4,3 +4,6 @@
 [submodule "roofer"]
 	url = https://github.com/Aalia-Fathima/Xzect-task-8-repo.git
 
+[submodule "AI-Mental-health-supporter-chatbot-server"]
+	path = AI-Mental-health-supporter-chatbot-server
+	url = https://github.com/Aalia-Fathima/AI-Mental-health-supporter-chatbot-server.git
