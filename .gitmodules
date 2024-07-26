@@ -3,6 +3,4 @@
 	url = https://github.com/Aalia-Fathima/Xzect-task-8-repo.git
 [submodule "roofer"]
 	url = https://github.com/Aalia-Fathima/Xzect-task-8-repo.git
-[submodule "path/to/submodule"]
-	path = path/to/submodule
-	url = https://github.com/Aalia-Fathima/AI-Mental-health-supporter-chatbot-server.git
+
