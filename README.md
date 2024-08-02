@@ -47,7 +47,7 @@ cd task-7
 git clone https://github.com/Aalia-Fathima/Xzect-task-8-repo.git
 #for final task
 git clone https://github.com/Aalia-Fathima/AI-Mental-health-supporter-chatbot-nextjs.git
-git clone https://github.com/Aalia-Fathima/Xzect-task-8-repo.git
+git clone https://github.com/Aalia-Fathima/AI-Mental-health-supporter-chatbot-server.git
 npm install
 npm run dev
 ```
@@ -58,9 +58,10 @@ npm run dev
 **Bootstrap:**  Used in Task 6 for responsive design.<br>
 **Tailwind CSS:**  Used in Task 7 for utility-first styling.<br>
 **Next.js:**  Used in Task 8 for building a server-rendered React application.<br>
-**Express.js:** 
-**NPM packages:**
-**Gemini-API**
+**Things listed below are used in Final task for building server side**
+- **Express.js:** 
+- **NPM packages:** 
+- **Gemini-API**
 
 ## License
 This project is licensed under the MIT License.
