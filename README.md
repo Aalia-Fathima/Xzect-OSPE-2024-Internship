@@ -46,7 +46,7 @@ cd task-7
 # for task 8
 git clone https://github.com/Aalia-Fathima/Xzect-task-8-repo.git
 #for final task
-git clone https://github.com/Aalia-Fathima/Xzect-task-8-repo.git
+git clone https://github.com/Aalia-Fathima/AI-Mental-health-supporter-chatbot-nextjs.git
 git clone https://github.com/Aalia-Fathima/Xzect-task-8-repo.git
 npm install
 npm run dev
