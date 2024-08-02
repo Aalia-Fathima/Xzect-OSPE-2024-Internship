@@ -28,6 +28,9 @@ In this task, I built a modern and efficient website home page using HTML and Ta
 ### Task 8: Next.js
 For this task, I created the website using Next.js, integrating both server-side rendering and front-end frameworks for optimal performance.
 
+### Final Task: AI Chatbot-Mental Health Support: Provides emotional support and coping strategies.
+In this task, I created a website that has client side made in Next.js and server side made using express.js,gemini-api,npm packages.
+
 ## Getting Started
 
 To get started with any of the tasks, clone the respective repository using the following commands:
@@ -42,6 +45,9 @@ cd task-6
 cd task-7
 # for task 8
 git clone https://github.com/Aalia-Fathima/Xzect-task-8-repo.git
+#for final task
+git clone https://github.com/Aalia-Fathima/Xzect-task-8-repo.git
+git clone https://github.com/Aalia-Fathima/Xzect-task-8-repo.git
 npm install
 npm run dev
 ```
@@ -52,6 +58,9 @@ npm run dev
 **Bootstrap:**  Used in Task 6 for responsive design.<br>
 **Tailwind CSS:**  Used in Task 7 for utility-first styling.<br>
 **Next.js:**  Used in Task 8 for building a server-rendered React application.<br>
+**Express.js:** 
+**NPM packages:**
+**Gemini-API**
 
 ## License
 This project is licensed under the MIT License.
